@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="nl-NL">
+  <head>
+    <meta charset="UTF-8">
+    <title>Horizon Geodesie New</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+  </head>
+
+  <body>
+  <div class="bodydiv">
+    <!-- Header container -->
+    <div class="header">
+      <img src="images/horizongeodesie-logo.png" alt="horizongeodesie logo" height="75" width="454" class="horizongeodesie-logo">
+      <div class="header-buttons">
+        <a href="#landmeten-anchor">
+          <button class="landmeten" onclick="openPage(event, 'landmeten')"></button>
+        </a>
+        <a href="#uitzetten-anchor">
+          <button class="uitzetten" onclick="openPage(event, 'uitzetten')"></button>
+        </a>
+        <a href="#training-anchor">
+          <button class="training" onclick="openPage(event, 'training')"></button>
+        </a>
+      </div>
+    </div>
+    <!-- Tab links -->
+    <div class="tab">
+      
+      <div>
+        <button class="tablinks" id="defaultOpen" onclick="openPage(event, 'home')">HOME</button>
+      </div>
+
+      <div class="dropdown">
+        <a href="#landmeten-anchor" class="anchor-link">
+          <button class="tablinks" class="dropbtn" onclick="openPage(event, 'landmeten')">LANDMETEN</button>
+        </a>
+        <div class="dropdown-content">
+          <a href="#landmeten-algemeen-anchor" class="anchor-link">
+            <button class="tablinks" id="algemeen" onclick="openPage(event, 'landmeten-algemeen')">ALGEMEEN</button>
+          </a>
+          <a href="#landmeten-projecten-anchor" class="anchor-link">
+            <button class="tablinks" onclick="openPage(event, 'landmeten-projecten')">PROJECTEN</button>
+          </a>
+        </div>
+      </div>
+
+      <div class="dropdown">
+        <a href="#uitzetten-anchor" class="anchor-link">
+          <button class="tablinks" class="dropbtn" onclick="openPage(event, 'uitzetten')">UITZETTEN</button>
+        </a>
+        <div class="dropdown-content">
+          <a href="#uitzetten-algemeen-anchor" class="anchor-link">
+            <button class="tablinks" id="algemeen" onclick="openPage(event, 'uitzetten-algemeen')">ALGEMEEN</button>
+          </a>
+          <a href="#uitzetten-projecten-anchor" class="anchor-link">
+            <button class="tablinks" onclick="openPage(event, 'uitzetten-projecten')">PROJECTEN</button>
+          </a>
+        </div>
+      </div>
+
+      <div class="dropdown">
+        <a href="#training-anchor" class="anchor-link">
+          <button class="tablinks" class="dropbtn" onclick="openPage(event, 'training')">TRAINING</button>
+        </a>
+        <div class="dropdown-content">
+          <a href="#training-algemeen-anchor" class="anchor-link">
+            <button class="tablinks" id="algemeen" onclick="openPage(event, 'training-algemeen')">ALGEMEEN</button>
+          </a>
+          <a href="#training-projecten-anchor" class="anchor-link">
+            <button class="tablinks" onclick="openPage(event, 'training-projecten')">PROJECTEN</button>
+          </a>
+        </div>
+      </div>
+
+      <div>
+        <a href="#over-ons-anchor" class="anchor-link">
+          <button class="tablinks" onclick="openPage(event, 'over-ons')">OVER ONS</button>
+        </a>
+      </div>
+
+      <div>
+        <a href="#contact-anchor" class="anchor-link">
+          <button class="tablinks" onclick="openPage(event, 'contact')">CONTACT</button>
+        </a>
+      </div>
+    </div>
+
+    <!-- Slideshow container -->
+    <div class="slideshow-container">
+
+      <!-- Full-width images with number and caption text -->
+      <div class="mySlides fade">
+       <img src="images/TotalStation_Dia.jpg" style="width:100%" alt="totalstation">
+       <a href="#landmeten-anchor">
+        <h1 onclick="openPage(event, 'landmeten')">Landmeten</h1>
+      </a>
+        <p>Landmeten met morderne apperatuur</p>
+      </div>
+
+      <div class="mySlides fade">
+        <img src="images/GPSOntvanger_Dia.jpg" style="width:100%" alt="GPSontvanger">
+        <a href="#uitzetten-anchor">
+          <h1 onclick="openPage(event, 'uitzetten')">Uitzetten</h1>
+        </a>
+        <p>Uitzeten met behulp van de nieuwste technieken</p>
+      </div>
+
+      <div class="mySlides fade">
+        <img src="images/Waterpastoestel_Dia.jpg" style="width:100%" alt="waterpastoestel">
+        <a href="#training-anchor">
+          <h1 onclick="openPage(event, 'training')">Training</h1>
+        </a>
+        <p>Praktijkgerichte begeleiding van landmeters</p>
+      </div>
+
+      <!-- Next and previous buttons -->
+      <div class="next-prev-button">
+        <a class="prev" onclick="plusSlides(-1)"><</a>
+        <a class="next" onclick="plusSlides(1)">></a>
+      </div>
+
+      <!-- The dots/circles -->
+      <div class="all-dot" style="text-align:center">
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
+      </div>
+    </div>
+
+    <!-- Tab content -->
+    <div class="all-tabs">
+      <div id="home" class="tabcontent">
+        <div class="home-content">
+          <h1 >Horizon Geodesie</h1>
+          <p>Samen werken aan de oplossing.</p>
+        </div>
+      <div class="home-cards">
+        <div class="home-landmeten">
+          <a>
+            <img onclick="openPage(event, 'landmeten')" src="images/Landmeten_icoontje_100.png" alt="landmeten icoontje">
+            <h2 onclick="openPage(event, 'landmeten')">Landmeten</h2>
+          </a>
+          <p>Een breed aanbod van landmeetkundige diensten</p>
+        </div>
+        <div class="home-uitzetten">
+          <a>
+            <img onclick="openPage(event, 'uitzetten')" src="images/Uitzetten_icoontje_100.png" alt="uitzetten icoontje">
+            <h2 onclick="openPage(event, 'uitzetten')">Uitzetten</h2>
+          </a>
+          <p>Maatvoering in verschillende disciplines</p>
+        </div>
+        <div class="home-training">
+          <a>
+            <img onclick="openPage(event, 'training')" src="images/Training_icoontje_100.png" alt="training icoontje">
+            <h2 onclick="openPage(event, 'training')">Training</h2>
+          </a>
+          <p>Opleidingen in de landmeetkunde</p>
+        </div>
+      </div>
+    </div>
+
+      <div class="infotabs">
+        <div id="landmeten" class="tabcontent">
+          <h1 id="landmeten-anchor">Landmeten</h1>
+          <ul>
+            <li>Reconstructie kadastrale grenzen</li>
+            <li>Inmeten t.b.v.&nbsp;BAG en&nbsp;BGT</li>
+            <li>Deformatiemetingen</li>
+            <li>Proefsleuven inmeten</li>
+            <li>Revisiemetingen</li>
+            <li>Hoeveelheden bepalen</li>
+            </ul>
+        </div>
+
+        <div id="landmeten-algemeen" class="tabcontent">
+          <h1 id="landmeten-algemeen-anchor">Landmeten Algemeen</h1>
+        </div>
+
+        <div id="landmeten-projecten" class="tabcontent">
+          <h1 id="landmeten-projecten-anchor">Landmeten Projecten</h1>
+        </div>
+    
+        <div id="uitzetten" class="tabcontent">
+          <h1 id="uitzetten-anchor">Uitzetten</h1>
+          <ul>
+            <li>Omzetten ontwerpgegevens naar 2D&nbsp;of 3D&nbsp;uitzetbestanden</li>
+            <li>Situatie-afhankelijk uitzetten met tachymeter of GPS-ontvanger</li>
+            <li>Leveren van duidelijke uitzettekeningen</li>
+          </ul>
+        </div>
+
+        <div id="uitzetten-algemeen" class="tabcontent">
+          <h1 id="uitzetten-algemeen-anchor">Uitzetten Algemeen</h1>
+        </div>
+
+        <div id="uitzetten-projecten" class="tabcontent">
+          <h1 id="uitzetten-projecten-anchor">Uitzetten Projecten</h1>
+        </div>
+
+        <div id="training" class="tabcontent">
+          <h1 id="training-anchor">Training</h1>
+          <ul>
+            <li>Begeleiding van&nbsp;landmeters in opleiding in de eigen&nbsp;werkomgeving.</li>
+            <li>Gastdocent bij opleidingsinstituten.</li>
+            <li>Ontwikkelen van lesmateriaal.</li>
+            <li>Advies bij landmeetkundige werkprocessen.</li>
+          </ul>
+          <p>Hieronder kunt u een instructiefilm bekijken&nbsp;over het principe van waterpassen.</p>
+          <p><iframe width="690" height="388" src="https://www.youtube.com/embed/5WCacB5XpdE?feature=oembed" frameborder="0" allowfullscreen=""></iframe></p>
+        </div>
+
+        <div id="training-algemeen" class="tabcontent">
+          <h1 id="training-algemeen-anchor">Training Algemeen</h1>
+        </div>
+
+        <div id="training-projecten" class="tabcontent">
+          <h1 id="training-projecten-anchor">Training Projecten</h1>
+          <p>SOMA Kadasteropleiding</p>
+          <div>
+            <img src="images/SOMAtheorie.jpg" alt="soma theorie">
+          </div>
+          <div>
+            <img src="images/SOMAtestennieuweveldboeken.jpg" alt="soma testen nieuwe veldboeken">
+          </div>
+          <div>
+            <img src="images/SOMApuntenuitzetten.jpg" alt="soma punten uitzetten">
+          </div>
+          <div>
+            <img src="images/SOMAsituatieinmeten.jpg" alt="soma situatie inmeten">
+          </div>
+        </div>
+
+        <div id="over-ons" class="tabcontent">
+          <h1 id="over-ons-anchor">Over ons</h1>
+          <div>
+            <p>Horizon Geodesie is een eenmansbedrijf, gevestigd in Ruurlo in de Achterhoek. Het is opgericht door Chris van Trigt, geodetisch ingenieur met brede kennis en praktijkervaring. De werkzaamheden bestaan uit alle voorkomende inmeet- en uitzetwerkzaamheden voor overheid, bedrijven en particulieren. Tevens verzorg ik uw AutoCAD tekenwerk.<br>
+            Tenslotte&nbsp;begeleid ik&nbsp;landmeters in opleiding voor het optimaliseren van uw werkproces.</p>
+            <p>Door mijn jarenlange ervaring bij gemeenten,&nbsp;het&nbsp;Kadaster en in de civiele sector kan ik een breed scala aan diensten aanbieden. Door de korte lijnen kan ik u snel en flexibel van dienst zijn tegen een scherp tarief. De werkzaamheden worden uitgevoerd met moderne meetapparatuur en verwerkingssoftware.</p>
+            <p>Is uw interesse gewekt en wilt u vrijblijvend informatie of een offerte ontvangen? Neem dan <a class="over-ons-contact-link" href="#contact-anchor" onclick="openPage(event, 'contact')">contact</a> met mij op.</p>
+          </div>
+        </div>
+
+        <div id="contact" class="tabcontent">
+          <h1 id="contact-anchor">Contact</h1>
+          <ul>
+            <li>ing. Chris van Trigt</li>
+            <li>Strengendijk 2</li>
+            <li>7261 KM Ruurlo</li>
+            <li>(06) 22 09 27 27</li>
+            <li><a href="mailto:info@horizongeodesie.nl">info@horizongeodesie.nl</a></li>
+          </ul>
+          <ul>
+            <li>Kvk: 09221725</li>
+            <li>Btw: 1662.37.127.B.01</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer container-->
+    <div class="Footer">
+      <p class="info">Horizon Geodesie | Strengendijk 2 | 7261 KM Ruurlo | (06) 22 09 27 27 | info@horizongeodesie.nl</p>
+      <p class="copyright">Copyright © <span id="year"></span> <span class="copyright-horizongeodesie">Horizon Geodesie</span>  Alle rechten voorbehouden.</p>
+    </div>
+
+  </div>
+  </body>
+</html>
+
+<!-- logo veranderen: landmeten maatvoering opleiding -->
+<!-- tabs landmeten maatvoering opleiding kadaster contact(over ons) met nieuwe foto's 
+de anchor aanpassen iets naar boven 
+linked in link -->
